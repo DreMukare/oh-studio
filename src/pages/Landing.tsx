@@ -4,7 +4,10 @@ import Layout from '../components/Layout';
 const Landing = () => {
 	return (
 		<Layout>
-			<LandingHero />
+			<LandingHero
+				isLanding
+				headerText="A brand and product designer working with clients globally"
+			/>
 		</Layout>
 	);
 };

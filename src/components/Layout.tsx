@@ -10,6 +10,7 @@ const Layout = (props: {
 	return (
 		<div className="container">
 			<Navbar />
+
 			{props.children}
 			<Footer />
 		</div>

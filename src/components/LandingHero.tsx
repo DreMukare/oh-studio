@@ -2,7 +2,13 @@ import HeaderText from './HeaderText';
 import './LandingHero.sass';
 import MarketingTag from './MarketingTag';
 
-const LandingHero = () => {
+const LandingHero = ({
+	isLanding,
+	headerText,
+}: {
+	isLanding: boolean;
+	headerText: string;
+}) => {
 	const tagTitles = ['Branding', 'Product', 'Design Systems'];
 
 	const MarketingTags = (props: { tagTitles: string[] }) => {
@@ -20,8 +26,8 @@ const LandingHero = () => {
 
 	return (
 		<div className="landingHeroContainer">
-			<HeaderText text="A brand and product designer working with clients globally" />
-			<MarketingTags tagTitles={tagTitles} />
+			<HeaderText text={headerText} />
+			{isLanding && <MarketingTags tagTitles={tagTitles} />}
 		</div>
 	);
 };
