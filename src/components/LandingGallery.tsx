@@ -11,7 +11,7 @@ const LandingGallery = (props: { imagesData: ImageData[] }) => {
 	const { imagesData } = props;
 
 	return (
-		<div>
+		<div className="landingGalleryContainer">
 			{imagesData.map((image: ImageData, idx: number) => {
 				return (
 					<LandingImage

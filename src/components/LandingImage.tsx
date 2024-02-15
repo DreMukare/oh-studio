@@ -18,20 +18,26 @@ const LandingImage = (props: {
 			}}
 		>
 			{imageUrl ? (
-				<img src={imageUrl} alt={`Brand image of ${brandName}`} />
+				<img
+					className="landingImage"
+					src={imageUrl}
+					alt={`Brand image of ${brandName}`}
+				/>
 			) : (
 				<video
 					className="landingVideo"
 					src={videoUrl}
-					loop
+					loop={true}
 					autoPlay
 					playsInline
 				></video>
 			)}
-			<div>
-				<p>{brandName}</p>
-				<div>
-					<ArrowCircleUpLeft />
+			<div className="overlay">
+				<div className="overlayContent">
+					<p className="brandName">{brandName}</p>
+					<div>
+						<ArrowCircleUpLeft className="imageLinkIcon" />
+					</div>
 				</div>
 			</div>
 		</div>

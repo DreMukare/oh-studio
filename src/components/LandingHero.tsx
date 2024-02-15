@@ -26,7 +26,7 @@ const LandingHero = ({
 
 	return (
 		<div className="landingHeroContainer">
-			<HeaderText text={headerText} />
+			<HeaderText text={headerText} width="60%" style={{}} />
 			{isLanding && <MarketingTags tagTitles={tagTitles} />}
 		</div>
 	);
