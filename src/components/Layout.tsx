@@ -11,7 +11,7 @@ const Layout = (props: {
 		<div className="container">
 			<Navbar />
 
-			{props.children}
+			<div style={{ marginBottom: '2em' }}>{props.children}</div>
 			<Footer />
 		</div>
 	);
