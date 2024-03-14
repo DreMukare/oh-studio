@@ -15,7 +15,7 @@ const LandingGallery = (props: { imagesData: ImageData[] }) => {
 		<motion.div
 			initial={{ opacity: 0, marginTop: '8em' }}
 			animate={{ opacity: 1, marginTop: 0 }}
-			transition={{ delay: 2.25 }}
+			transition={{ delay: 2.25, ease: 'easeIn' }}
 			className="landingGalleryContainer"
 		>
 			{imagesData.map((image: ImageData, idx: number) => {

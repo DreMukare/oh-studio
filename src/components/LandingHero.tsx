@@ -31,7 +31,7 @@ const LandingHero = ({
 			<motion.div
 				initial={{ opacity: 0, marginTop: '4em' }}
 				animate={{ opacity: 1, marginTop: 0 }}
-				transition={{ delay: 1.5 }}
+				transition={{ delay: 1.5, ease: 'easeIn' }}
 			>
 				{isLanding && <MarketingTags tagTitles={tagTitles} />}
 			</motion.div>

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import './ImageGallery.sass';
 
 const ImageGallery = () => {
@@ -13,11 +14,27 @@ const ImageGallery = () => {
 	];
 
 	return (
-		<div className="imageGalleryContainer">
-			{imageData.map((image: { url: string; alt: string }, idx: number) => (
-				<img key={idx} src={image.url} alt={image.alt} />
-			))}
-		</div>
+		<motion.div
+			initial={{ opacity: 0, marginTop: '4em' }}
+			animate={{ opacity: 1, marginTop: 0 }}
+			transition={{ delay: 1.5, ease: 'easeIn' }}
+			className="imageGalleryContainer"
+		>
+			{imageData.map((image: { url: string; alt: string }, idx: number) => {
+				return idx === 1 ? (
+					<motion.img
+						initial={{ opacity: 0, marginTop: '2.5em' }}
+						animate={{ opacity: 1, marginTop: 0 }}
+						transition={{ delay: 1.8, ease: 'easeIn' }}
+						key={idx}
+						src={image.url}
+						alt={image.alt}
+					/>
+				) : (
+					<img key={idx} src={image.url} alt={image.alt} />
+				);
+			})}
+		</motion.div>
 	);
 };
 
