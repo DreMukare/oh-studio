@@ -15,16 +15,16 @@ const ImageGallery = () => {
 
 	return (
 		<motion.div
-			initial={{ opacity: 0, marginTop: '4em' }}
-			animate={{ opacity: 1, marginTop: 0 }}
+			initial={{ opacity: 0, y: '4em' }}
+			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 1.5, ease: 'easeIn' }}
 			className="imageGalleryContainer"
 		>
 			{imageData.map((image: { url: string; alt: string }, idx: number) => {
 				return idx === 1 ? (
 					<motion.img
-						initial={{ opacity: 0, marginTop: '2.5em' }}
-						animate={{ opacity: 1, marginTop: 0 }}
+						initial={{ opacity: 0, y: '2.5em' }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 1.8, ease: 'easeIn' }}
 						key={idx}
 						src={image.url}

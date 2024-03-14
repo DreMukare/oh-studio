@@ -13,8 +13,8 @@ const LandingGallery = (props: { imagesData: ImageData[] }) => {
 
 	return (
 		<motion.div
-			initial={{ opacity: 0, marginTop: '8em' }}
-			animate={{ opacity: 1, marginTop: 0 }}
+			initial={{ opacity: 0, y: '8em' }}
+			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 2.25, ease: 'easeIn' }}
 			className="landingGalleryContainer"
 		>

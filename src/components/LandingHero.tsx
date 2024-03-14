@@ -29,8 +29,8 @@ const LandingHero = ({
 		<div className="landingHeroContainer">
 			<HeaderText text={headerText} width="60%" style={{}} />
 			<motion.div
-				initial={{ opacity: 0, marginTop: '4em' }}
-				animate={{ opacity: 1, marginTop: 0 }}
+				initial={{ opacity: 0, y: '4em' }}
+				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 1.5, ease: 'easeIn' }}
 			>
 				{isLanding && <MarketingTags tagTitles={tagTitles} />}
