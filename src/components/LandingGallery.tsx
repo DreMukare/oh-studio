@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import LandingImage from './LandingImage';
 import './LandingGallery.sass';
 
@@ -11,7 +12,12 @@ const LandingGallery = (props: { imagesData: ImageData[] }) => {
 	const { imagesData } = props;
 
 	return (
-		<div className="landingGalleryContainer">
+		<motion.div
+			initial={{ opacity: 0, marginTop: '8em' }}
+			animate={{ opacity: 1, marginTop: 0 }}
+			transition={{ delay: 2.25 }}
+			className="landingGalleryContainer"
+		>
 			{imagesData.map((image: ImageData, idx: number) => {
 				return (
 					<LandingImage
@@ -22,7 +28,7 @@ const LandingGallery = (props: { imagesData: ImageData[] }) => {
 					/>
 				);
 			})}
-		</div>
+		</motion.div>
 	);
 };
 
