@@ -1,3 +1,4 @@
+import Clients from '../components/Clients';
 import Experience from '../components/Experience';
 import HeaderText from '../components/HeaderText';
 import ImageGallery from '../components/ImageGallery';
@@ -21,6 +22,7 @@ const Profile = () => {
 			/>
 			<Space height="4em" />
 			<Experience />
+			<Clients />
 		</Layout>
 	);
 };
