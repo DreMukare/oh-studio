@@ -1,6 +1,22 @@
+// Define breakpoints for different viewport widths
+$small-breakpoint: 600px
+$medium-breakpoint: 900px
+
+// Define header sizes for different viewport widths
+$small-header-size: 1.5em
+$medium-header-size: 2.5em
+$header-size: 4em
+
+// Header styles
 .headerText
   font-family: 'Poppins', sans-serif
   font-weight: 25px
   text-align: center
   margin: 4rem 1rem
-  font-size: 4em
+  font-size: $header-size // Set initial font size
+  
+  @media (max-width: $small-breakpoint)
+    font-size: $small-header-size // Reduce font size for small screens
+  
+  @media (max-width: $medium-breakpoint)
+    font-size: $medium-header-size
