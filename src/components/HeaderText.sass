@@ -16,7 +16,10 @@ $header-size: 4em
   font-size: $header-size // Set initial font size
   
   @media (max-width: $small-breakpoint)
-    font-size: $small-header-size // Reduce font size for small screens
+    font-size: $small-header-size 
+    font-weight: 40px
+    margin: 0
+    line-height: 1.25em
   
   @media (max-width: $medium-breakpoint)
     font-size: $medium-header-size

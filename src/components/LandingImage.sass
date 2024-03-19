@@ -5,6 +5,14 @@
   position: relative
   font-family: Poppins, sans-serif
 
+  @media (max-width: 768px)
+      width: 95%
+      height: auto
+
+      .landingImage .landingVideo
+        width: 100%
+        height: auto
+
   .landingImage, .landingVideo
     border-radius: 15px
     max-width: 100% 
@@ -57,6 +65,8 @@
 
     .landingImage, .landingVideo
       filter: blur(8px)
+
+  
 
 @keyframes fadeIn
   0%

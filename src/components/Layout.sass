@@ -4,8 +4,22 @@
   display: flex
   flex-direction: column
   align-items: center
+  justify-content: center
   gap: 2rem
-  max-width: 1280px
-  margin: 0 auto
-  padding: 2rem 3.5rem
+  width: 90%
+  margin: auto
+  // padding: 2rem 3.5rem
   position: relative
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+
+  // set width of container to 70% of viewport width on tablet sized screens
+  @media (max-width: 900px)
+    width: 60%
+
+  // set width of container to 80% of viewport width on mobile sized screens
+  @media (max-width: 600px)
+    width: 80%
