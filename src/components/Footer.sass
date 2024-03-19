@@ -6,20 +6,31 @@
   bottom: 0px
   left: 0
   right: 0
-  height: 15%
+
+  @media (min-width: 700px) and (max-width: 950px)
+    height: 25%    
   
 .callToAction
   text-align: center
+  margin-top: 6em
   margin-bottom: 6em
 
-  @media (max-width: 600px)
-    margin-top: 8em
-    margin-bottom: 8em
+  @media (max-width: 700px)
+    margin-top: 6em
+    margin-bottom: 6em
+
+  // create media query for tablet only
+  @media (min-width: 700px) and (max-width: 950px)
+    margin-top: 16em
+    margin-bottom: 16em
 
   h2
     margin: 0
     font-size: 2rem
     margin-bottom: -0.5rem
+
+    @media (max-width: 700px)
+      font-size: 1.5rem
 
   .h2Link
     color: #7F7F7F
@@ -34,15 +45,12 @@
   justify-content: space-between
   align-items: center
   padding: 2rem
-  outline: 1px solid purple
 
   @media (max-width: 600px)
     flex-direction: column
     gap: 2rem
     width: 100%
     padding: 0
-    margin: 0
-    margin-bottom: 3em
 
   .footerLinkContainer
     display: flex
@@ -54,3 +62,6 @@
       cursor: pointer
       &:hover
         color: rgba(127, 127, 127, 0.4)
+
+    @media (max-width: 700px)
+      font-size: 0.8rem
